@@ -1,0 +1,21 @@
+.navbar {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+ul,
+li {
+  list-style-type: none;
+}
+li {
+  letter-spacing: 2px;
+  position: relative;
+}
+.menu {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}

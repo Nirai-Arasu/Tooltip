@@ -1,0 +1,19 @@
+.tooltip {
+  width: 150px;
+
+  position: absolute;
+  transform: translateX(-50%);
+  /* z-index: 1; */
+  /* top: 100%;*/
+  left: 50%;
+  /* margin-rigt: -60px; */
+}
+.tool {
+  margin-top: 2rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}

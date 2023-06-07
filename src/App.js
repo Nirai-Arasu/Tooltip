@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
+  const [toolTip, setToolTip] = useState({
+    menu_one: false,
+    menu_two: false,
+    menu_three: false,
+    menu_four: false,
+  });
+  const removeHover = (event) => {
+    console.log(event.target.id);
+    setToolTip({ ...toolTip, [event.target.id]: false });
+  };
+  const addHover = (event) => {
+    console.log(event.target.id);
+    setToolTip({ ...toolTip, [event.target.id]: true });
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar toolTip={toolTip} removeHover={removeHover} addHover={addHover} />
     </div>
   );
 }
